@@ -14,19 +14,18 @@
 
 <body>
 	
-	<div th:each="p:"></div>
+	<div></div>
 	<div class="container">
 		<h1 class="text-center">La mia pizzeria!</h1>
 		<!-- prova inserimento frammento con collegamento del file-->
 		<!-- BISOGNA METTERE UN BOTTONE E NON UN ANCHOR TAG ******DA SISTEMARE*******-->
 		<form th:action="@{/pizzeria}" method="get">
 			<div class="col-3 mb-3">
-				<label for="search-pizza" class="form-label">Cerca la tua pizza</label>
-				<input type="text" id="search-pizza" class="form-control">
+				<label for="nome" class="form-label">Cerca la tua pizza</label>
+				<input type="text" id="nome" class="form-control" name="nome">
 			</div>
 			<div class="col-2 mb-3">
-				<button th:replace="fragments :: button('/', 'Cerca la tua pizza')" class="btn btn-danger m-1"
-					type="submit" id="submitButton">
+				<button  class="btn btn-danger m-1"	type="submit" id="submitButton"> Cerca
 				</button>
 		</form>
 	</div>

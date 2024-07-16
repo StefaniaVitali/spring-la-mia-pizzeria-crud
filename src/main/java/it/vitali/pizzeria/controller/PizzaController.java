@@ -35,6 +35,7 @@ public class PizzaController {
 			pizze = repository.findAll();
 		} else {
 			pizze = repository.findByNome(nome);
+			model.addAttribute("list", pizze);	
 		}
 		
 		model.addAttribute("list", pizze);	
